@@ -6,8 +6,16 @@ const webUrl = "https://gorgeous-dusk-a3880d.netlify.app/"
 // const webAppUrl = "/"
 
 //t.me/testo_ax_my_bot
+const express = require('express')
+const app = express()
 
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
 const bot = new TelegramBot(token, { polling: true });
+
 
 // bot.onText(/\/echo (.+)/, (msg, match) => {
 
